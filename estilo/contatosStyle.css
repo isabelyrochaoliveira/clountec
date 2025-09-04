@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#ctts {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "redesSociais faleConosco";
+}
+
+.redesSociais{
+    grid-area: redesSociais;
+    text-align: center;
+    margin: 20px;
+    background-color: #caf0f8;
+}
+
+.faleConosco{
+    grid-area: faleConosco;
+    margin: 20px;
+}
+
+.logos{
+    width: 16%;
+}
+
+#paragrafo{
+    margin: 20px;
+    text-align: center;
+}
+
+.botaoLogo{
+    background-color: skyblue;
+    width: 75px;
+    height: 30px;
+    border: none;
+    box-shadow: 4px 5px 4px #014AAD;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: 2px;
+    margin-left: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #03045e;
+}
+
+form {
+    width: 100%;
+    max-width: 30rem;
+    margin: 10px;
+}
+
+label,
+input,
+textarea,
+.enviar {
+    display: block;
+    margin-left: 50px;
+}
+
+input,
+textarea,
+.enviar {
+width: 100%;
+font: inherit;
+padding: 1.25rem;
+font-weight: 700;
+}
+
+input,
+textarea {
+color: black;
+background: #F8DEB6;
+border: 0.125rem solid transparent;
+border-radius: 1.125rem;
+transition: border-color 0.3s, box-shadow 0.3s;
+font-family: 'Nunito Sans', sans-serif;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+outline: none;
+border-color: #014AAD;
+box-shadow: 0 0 0 0.3125rem #e5c38f;
+}
+
+label {
+margin-bottom: 0.5rem;
+color: black;
+font-family: 'Sigmar One', cursive;
+}
+
+textarea {
+min-height: 12.5rem;
+resize: vertical;
+}
+
+.enviar {
+border: none;
+border-radius: 99px;
+color: #caf0f8;
+background: #014AAD;
+margin-top: 10px;
+cursor: pointer;
+transition: 0.3s;
+font-family: 'Nunito Sans', sans-serif;
+}
+
+.enviar:hover,
+.enviar:focus {
+outline: none;
+background: #03045e;
+}
+
+.enviar:disabled {
+cursor: not-allowed;
+background: #555b69;
+}
+
+.success,
+.error {
+text-align: center;
+}
+
+.success {
+color: #38b000;
+}
+
+.error {
+color: #bf0603;
+}

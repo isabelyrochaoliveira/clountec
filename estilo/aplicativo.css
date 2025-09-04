@@ -1,0 +1,17 @@
+#telas{
+    width: 18%;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#telasp2{
+    width: 18%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+*{
+    text-align: center;
+}

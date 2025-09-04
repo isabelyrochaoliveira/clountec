@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="imagens/logo clountec.png">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/contatosStyle.css">
+    <title>Contatos</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <header>
+        <img id="logoTopo" src="imagens/logo clountec.png">
+        <div class="menu">
+            <a href="index.html"><button class="botaomenu">Home</button></a>
+            <a href="aplicativo.html"><button class="botaomenu">Aplicativo</button></a>
+            <a href="duvidas.html"><button class="botaomenu">Perguntas</button></a>
+            <a href="sobre.html"><button class="botaomenu">Sobre</button></a>
+        </div>
+    </header>
+    
+    <article id="ctts">
+
+        <nav class="redesSociais">
+            <h2 class="titulosRedes">REDES SOCIAIS</h2>
+            <p id="paragrafo">
+                Acompanhe nossas redes sociais e fique por dentro das últimas novidades e atualizações do Agrogenda. <br><br> 
+                Nosso objetivo é compartilhar conteúdo útil e informativo, para que você possa acompanhar de perto como nossas soluções estão ajudando a agricultura familiar. <br><br> 
+                Participe dessa jornada conosco! Conte sua experiência, dê seu feedback e faça parte de uma comunidade que cresce junto com o campo.
+            </p>
+
+            <br><br>
+            <img class="logos" src="imagens/logoInsta.png">
+            <a href="https://instagram.com/clountec?igshid=NzZlODBkYWE4Ng=="><button class="botaoLogo">Instagram</button></a>                
+            <br><br>
+            <img class="logos" src="imagens/logoYoutube.png">
+            <a href="https://www.youtube.com/@clountec"><button class="botaoLogo">Youtube</button></a>
+        </nav>
+
+        <nav class="faleConosco">
+            <h2 class="tituloscontatos">FALE CONOSCO</h2>
+            <p id="paragrafo">
+                Sua opinião é fundamental para o nosso crescimento e aprimoramento contínuo.<br>
+                Em caso de dúvidas, críticas ou sugestões, entre em contato conosco:
+            </p>
+            <!-- Removido action para usar apenas AJAX -->
+            <form id="formFaleConosco" name="formFaleConosco">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+                
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" id="assunto">
+                
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="5" required></textarea>
+                
+                <button class="enviar" type="submit">Enviar</button>
+            </form>
+        </nav>
+    </article>
+
+    <script>
+        const form = document.getElementById('formFaleConosco');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // impede redirecionamento
+
+            const formData = new FormData(form);
+
+            fetch('https://formsubmit.co/ajax/clountec@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Enviado com sucesso:', data);
+                alert('Mensagem enviada com sucesso!');
+                form.reset(); // limpa os campos
+            })
+            .catch(error => {
+                console.error('Erro ao enviar:', error);
+                alert('Ocorreu um erro. Tente novamente.');
+            });
+        });
+    </script>
+
+    <br><br>
+    <p id="rodape">© 2023 Clountec. Direitos reservados.</p>
+</body>
+</html>

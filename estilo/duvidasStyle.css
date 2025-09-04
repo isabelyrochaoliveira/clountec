@@ -1,0 +1,35 @@
+#titulo{
+    text-align: center;
+    margin-top: 8px;
+}
+
+.perguntas {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "duvidas1 duvidas2";
+}
+
+.duvidas1 {
+    grid-area: duvidas1;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 5px;
+}
+
+p {
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.duvidas2 {
+    grid-area: duvidas2;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+h4{
+    font-family: 'Sigmar One', cursive;
+    font-size: 85%;
+}
