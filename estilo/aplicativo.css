@@ -1,17 +1,21 @@
-#telas{
+*{
+    text-align: center;
+}
+
+#telas,
+#telasp2 {
     width: 18%;
     margin-top: 16px;
     margin-left: 10px;
     margin-right: 10px;
+    display: inline-block;
 }
 
-#telasp2{
-    width: 18%;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-*{
-    text-align: center;
+@media (max-width: 768px) {
+    #telas,
+    #telasp2 {
+        width: 80%;        
+        margin: 20px auto; 
+        display: block;  
+    }
 }

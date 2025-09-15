@@ -33,3 +33,15 @@ h4{
     font-family: 'Sigmar One', cursive;
     font-size: 85%;
 }
+
+@media (max-width: 768px) {
+    .perguntas {
+        display: block;
+    }
+
+    .duvidas1,
+    .duvidas2 {
+        margin: 20px auto;
+        text-align: left;
+    }
+}

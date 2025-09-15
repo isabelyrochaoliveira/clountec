@@ -51,6 +51,8 @@ h2 {
 .divisoes {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .divisao1 {
@@ -82,7 +84,7 @@ h2 {
     text-align: center;
     padding: 20px;
 }
-/* ===== SLIDESHOW (cole isto no seu CSS) ===== */
+
 .slideshow-container {
   max-width: 900px;
   margin: 30px auto;
@@ -91,10 +93,9 @@ h2 {
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0,0,0,0.18);
   background: #fff;
-  min-height: 320px; /* reserva espaço se imagem demorar a carregar */
+  min-height: 320px; 
 }
 
-/* aceita tanto .mySlides (seu código original) quanto .slide */
 .mySlides, .slide {
   display: none;
   text-align: center;
@@ -107,17 +108,14 @@ h2 {
   display: block;
 }
 
-/* garante que algo aparece mesmo se o JS falhar (fallback) */
 .mySlides:first-child, .slide:first-child {
   display: block;
 }
 
-/* ativação por classe (JS adiciona .active) */
 .mySlides.active, .slide.active {
   display: block;
 }
 
-/* número do slide no canto (opcional) */
 .numbertext {
   position: absolute;
   top: 10px;
@@ -130,7 +128,6 @@ h2 {
   z-index: 3;
 }
 
-/* botões */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -155,7 +152,6 @@ h2 {
 .prev { left: 18px; }
 .next { right: 18px; }
 
-/* dots */
 .dot-container {
   text-align: center;
   margin-top: 18px;
@@ -174,9 +170,58 @@ h2 {
 .dot:hover { transform: scale(1.08); }
 .dot.active { background: #014AAD; transform: scale(1.15); }
 
-/* responsividade */
-@media (max-width: 700px) {
-  .mySlides img, .slide img { height: 260px; object-fit: cover; }
-  .slideshow-container { margin: 18px; }
-  .prev, .next { width:36px; height:36px; font-size:18px; }
+@media (max-width: 768px) {
+
+  .topicos {
+    display: block;      
+    margin: 0 auto;
+  }
+
+  .topico1,
+  .topico2 {
+    width: 90%;         
+    margin: 10px auto;
+  }
+
+  #imgDuas {
+    width: 100%;           
+    margin-top: 20px;
+  }
+
+  .logosTopicos {
+    width: 60%;         
+  }
+
+  .mySlides img,
+  .slide img {
+    height: 200px;          
+    object-fit: cover;
+  }
+
+  .slideshow-container {
+    margin: 15px;
+  }
+
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+
+  .divisoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+  .divisao1,
+  .divisao2 {
+      width: 90%;
+      margin: 10px auto;
+  }
 }

@@ -221,8 +221,8 @@ b{
     margin-top: 50px;
     font-family: 'Josefin Sans', sans-serif;
     color: aliceblue;
-    margin-left: 43%;
-    margin-right: 43%;
+    display: block; 
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -230,4 +230,106 @@ b{
     text-align: center;
     background-color: #03045e;
     color: #caf0f8;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        padding-top: 10px;
+    }
+
+    .inferiorIndex {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+    }
+
+    .article2 {
+        height: auto;   
+        min-height: 200px;
+    }
+
+    .pCenter {
+        display: block;      
+        text-align: justify;  
+        margin: 0 auto;
+        padding: 10px 15px;
+    }
+    
+    #imgApp {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .topicos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topico1 {
+        order: 1;
+    }
+
+    .topico2 {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    #logoTopo {
+        width: 90px;
+    }
+
+    #imgApp {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .divisao1, .divisao2 {
+        flex: 1 1 100%;
+        width: auto; 
+    }
+
+    h2, #t1 {
+        font-size: 18px;
+    }
+
+    .article2 {
+        height: auto; 
+        min-height: 150px;
+    }
+
+    .pCenter {
+        display: block;      
+        text-align: justify; 
+        margin: 0 auto;
+        padding: 10px 15px;
+    }
+
+    .topicos,
+    .inferiorIndex {
+        grid-template-rows: auto;
+    }
+
+    .botaoInstall {
+        display: block;
+        margin: 20px auto;
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    #imgApp {
+        width: 95%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 }

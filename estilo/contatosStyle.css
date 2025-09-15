@@ -132,3 +132,39 @@ color: #38b000;
 .error {
 color: #bf0603;
 }
+
+@media (max-width: 768px) {
+    #ctts {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .redesSociais,
+    .faleConosco {
+        width: 90%;       
+        margin: 20px auto; 
+    }
+
+    .logos {
+        width: 25%;      
+    }
+
+    .botaoLogo {
+        width: 30%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    form {
+        width: 100%;
+        max-width: 90%;     
+        margin: 0 auto;
+    }
+
+    label,
+    input,
+    textarea,
+    .enviar {
+        margin-left: 0;   
+    }
+}
